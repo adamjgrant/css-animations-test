@@ -24,3 +24,19 @@
   font-family: sans-serif;
   text-decoration: none;
 }
+
+body {
+  margin: 0;
+}
+
+.test-1 .img {
+  width: 100vw;
+  height: 100vh;
+  background: url('mountain.jpg');
+  background-size: cover;
+  transition: 4s transform;
+}
+
+.test-1 .img.zoom {
+  transform: scale(1.5);
+}

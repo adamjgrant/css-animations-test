@@ -6,7 +6,7 @@
     <li><a href="3.html">Next</a></li>
 </div>
 
-<body class="test-1 test-2">
+<body class="test-1 test-2 test-3">
   <div class="img"></div>
   <div class="carousel carousel_right">
     <div class="carousel-item">
@@ -35,6 +35,14 @@
 <script>
   var image    = document.querySelector(".img"),
       carousel = document.querySelector(".carousel"),
+      body     = document.body,
+      performBlur = function() {
+        body.classList.add("blur");
+
+        window.setTimeout(function() {
+          body.classList.remove("blur");
+        }, 8000);
+      };
       performAnimation = function() {
         image.classList.add("zoom");
         carousel.classList.remove("carousel_right");
@@ -54,5 +62,10 @@
     performAnimation();
   }, 200);
 
+  setTimeout(function() {
+    performBlur();
+  }, 200);
+
   window.setInterval(performAnimation, 8000);
+  window.setInterval(performBlur, 16000);
 </script>

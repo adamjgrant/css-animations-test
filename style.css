@@ -4,6 +4,7 @@
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   padding: 0 25px;
+  z-index: 9;
 }
 
 .navigation ul {
@@ -39,4 +40,45 @@ body {
 
 .test-1 .img.zoom {
   transform: scale(1.5);
+}
+
+.carousel {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  left: 0;
+  display: flex;
+  width: calc(200px * 5);
+  transition: left 4s;
+}
+
+.carousel_right {
+  left: 100vw;
+  transition: left 0s;
+}
+
+.carousel_left {
+  left: -100vw;
+  transition: left 2s;
+}
+
+.carousel-item {
+  width: 200px;
+  height: 300px;
+  background: white;
+  padding: 25px;
+  margin-right: 25px;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  transition: filter 4s;
+}
+
+body.blur {
+  -webkit-filter: blur(25px);
 }

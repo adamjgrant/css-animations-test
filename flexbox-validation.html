@@ -1,15 +1,22 @@
-<script>
-export const testFlexbox = () => {
-  const f = 'flex';
-  const fw = `-webkit-${f}`;
-  const el = document.createElement('b');
-
-  try {
-    el.style.display = fw;
-    el.style.display = f;
-    return !!(el.style.display === f || el.style.display === fw);
-  } catch (err) {
-    return false;
-  }
-};
-</script>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      #flex { 
+        display: flex;
+      }
+      
+      #flex p {
+        background: orange;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flex">
+      <p>Item one</p>
+      <p>Item two</p>
+      <p>Item three</p>
+    </div>
+  </body>
+</html>

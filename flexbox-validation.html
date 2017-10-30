@@ -1,0 +1,15 @@
+<script>
+export const testFlexbox = () => {
+  const f = 'flex';
+  const fw = `-webkit-${f}`;
+  const el = document.createElement('b');
+
+  try {
+    el.style.display = fw;
+    el.style.display = f;
+    return !!(el.style.display === f || el.style.display === fw);
+  } catch (err) {
+    return false;
+  }
+};
+</script>
